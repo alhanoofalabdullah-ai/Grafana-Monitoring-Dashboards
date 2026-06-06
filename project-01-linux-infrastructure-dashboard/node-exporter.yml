@@ -1,0 +1,4 @@
+collector.filesystem:
+  ignored-mount-points:
+    - "/proc"
+    - "/sys"
