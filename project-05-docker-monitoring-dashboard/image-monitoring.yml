@@ -1,0 +1,9 @@
+image_monitoring:
+
+  image_count
+
+  image_size
+
+  unused_images
+
+  image_growth
