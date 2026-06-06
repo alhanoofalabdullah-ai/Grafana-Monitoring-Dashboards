@@ -1,0 +1,15 @@
+container_monitoring:
+
+  metrics:
+
+    - cpu_usage
+
+    - memory_usage
+
+    - filesystem_usage
+
+    - network_usage
+
+    - container_uptime
+
+    - restart_count
