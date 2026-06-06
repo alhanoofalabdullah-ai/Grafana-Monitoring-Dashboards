@@ -1,0 +1,9 @@
+host_monitoring:
+
+  cpu_usage
+
+  memory_usage
+
+  disk_usage
+
+  network_traffic
