@@ -1,0 +1,11 @@
+node_metrics:
+
+  cpu
+
+  memory
+
+  disk
+
+  filesystem
+
+  network
