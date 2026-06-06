@@ -1,0 +1,13 @@
+host_monitoring:
+
+  metrics:
+
+    - cpu
+
+    - memory
+
+    - disk
+
+    - network
+
+    - load_average
