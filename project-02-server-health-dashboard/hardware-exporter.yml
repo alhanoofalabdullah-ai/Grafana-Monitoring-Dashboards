@@ -1,0 +1,15 @@
+hardware_monitoring:
+
+  enabled: true
+
+  metrics:
+
+    - cpu_temperature
+
+    - fan_status
+
+    - disk_health
+
+    - power_supply_status
+
+    - server_health_score
