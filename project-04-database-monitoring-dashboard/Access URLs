@@ -1,0 +1,11 @@
+Grafana
+http://localhost:3000
+
+Prometheus
+http://localhost:9090
+
+MySQL Exporter
+http://localhost:9104
+
+PostgreSQL Exporter
+http://localhost:9187
