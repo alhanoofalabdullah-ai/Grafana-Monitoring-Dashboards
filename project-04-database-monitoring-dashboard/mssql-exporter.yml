@@ -1,0 +1,11 @@
+sqlserver_monitoring:
+
+  metrics:
+
+    - sqlserver_connections
+
+    - sqlserver_transactions
+
+    - sqlserver_batch_requests
+
+    - sqlserver_buffer_cache
