@@ -1,0 +1,50 @@
+groups:
+
+- name: KubernetesAlerts
+
+  rules:
+
+  - alert: NodeDown
+
+    expr: up == 0
+
+    for: 2m
+
+    labels:
+      severity: critical
+
+  - alert: PodCrashLoop
+
+    expr: kube_pod_container_status_restarts_total > 5
+
+    for: 5m
+
+    labels:
+      severity: critical
+
+  - alert: HighNodeCPUUsage
+
+    expr: 100 - (avg(rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+
+    for: 5m
+
+    labels:
+      severity: warning
+
+  - alert: HighNodeMemoryUsage
+
+    expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 85
+
+    for: 5m
+
+    labels:
+      severity: warning
+
+  - alert: DeploymentReplicaMismatch
+
+    expr: kube_deployment_spec_replicas != kube_deployment_status_replicas_available
+
+    for: 5m
+
+    labels:
+      severity: critical
