@@ -1,0 +1,19 @@
+node_exporter:
+
+  enabled: true
+
+  port: 9100
+
+  collectors:
+
+    - cpu
+
+    - meminfo
+
+    - filesystem
+
+    - diskstats
+
+    - netdev
+
+    - loadavg
