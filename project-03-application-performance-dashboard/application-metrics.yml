@@ -1,0 +1,17 @@
+application_metrics:
+
+  availability
+
+  response_time
+
+  request_count
+
+  request_rate
+
+  throughput
+
+  error_rate
+
+  active_sessions
+
+  transaction_duration
