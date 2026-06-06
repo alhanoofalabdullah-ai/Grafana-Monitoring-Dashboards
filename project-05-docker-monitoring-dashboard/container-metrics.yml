@@ -1,0 +1,13 @@
+container_metrics:
+
+  running_containers
+
+  stopped_containers
+
+  restart_count
+
+  cpu_usage
+
+  memory_usage
+
+  network_usage
