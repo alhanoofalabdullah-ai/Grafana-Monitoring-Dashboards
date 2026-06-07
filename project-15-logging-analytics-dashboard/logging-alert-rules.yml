@@ -1,0 +1,50 @@
+groups:
+
+- name: LoggingAnalyticsAlerts
+
+  rules:
+
+  - alert: CriticalErrorSpike
+
+    expr: critical_errors_total > 100
+
+    for: 5m
+
+    labels:
+      severity: critical
+
+  - alert: LogIngestionFailure
+
+    expr: log_ingestion_status == 0
+
+    for: 2m
+
+    labels:
+      severity: critical
+
+  - alert: HighSecurityEvents
+
+    expr: security_events_total > 500
+
+    for: 10m
+
+    labels:
+      severity: warning
+
+  - alert: LogStorageCritical
+
+    expr: log_storage_usage_percent > 90
+
+    for: 15m
+
+    labels:
+      severity: critical
+
+  - alert: InfrastructureFailureDetected
+
+    expr: infrastructure_alerts_total > 0
+
+    for: 5m
+
+    labels:
+      severity: critical
