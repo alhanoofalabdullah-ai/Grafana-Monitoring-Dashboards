@@ -1,0 +1,9 @@
+service_health:
+
+  service_uptime
+
+  service_availability
+
+  service_health_score
+
+  service_status
