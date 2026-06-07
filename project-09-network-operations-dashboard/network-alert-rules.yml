@@ -1,0 +1,50 @@
+groups:
+
+- name: NetworkOperationsAlerts
+
+  rules:
+
+  - alert: DeviceDown
+
+    expr: up == 0
+
+    for: 2m
+
+    labels:
+      severity: critical
+
+  - alert: HighLatency
+
+    expr: probe_duration_seconds > 0.1
+
+    for: 5m
+
+    labels:
+      severity: warning
+
+  - alert: PacketLossDetected
+
+    expr: probe_success == 0
+
+    for: 2m
+
+    labels:
+      severity: critical
+
+  - alert: HighBandwidthUtilization
+
+    expr: rate(ifHCInOctets[5m]) > 100000000
+
+    for: 5m
+
+    labels:
+      severity: warning
+
+  - alert: InterfaceErrorsDetected
+
+    expr: ifInErrors > 100
+
+    for: 5m
+
+    labels:
+      severity: warning
