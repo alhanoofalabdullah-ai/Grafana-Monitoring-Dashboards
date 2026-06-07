@@ -1,0 +1,9 @@
+tracing_metrics:
+
+  request_traces
+
+  trace_duration
+
+  failed_traces
+
+  distributed_transactions
