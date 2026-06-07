@@ -1,0 +1,19 @@
+blackbox_monitoring:
+
+  enabled: true
+
+  probes:
+
+    - icmp
+
+    - http
+
+    - tcp
+
+  metrics:
+
+    - probe_success
+
+    - probe_duration_seconds
+
+    - probe_http_status_code
