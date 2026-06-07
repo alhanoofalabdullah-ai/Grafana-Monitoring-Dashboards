@@ -1,0 +1,13 @@
+aws_monitoring:
+
+  services:
+
+    - ec2
+
+    - rds
+
+    - eks
+
+    - lambda
+
+    - elb
