@@ -1,0 +1,17 @@
+switch_monitoring:
+
+  switches:
+
+    - core_switch_01
+
+    - access_switch_01
+
+  metrics:
+
+    - port_status
+
+    - bandwidth
+
+    - interface_errors
+
+    - switch_health
