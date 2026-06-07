@@ -1,0 +1,9 @@
+infrastructure_logs:
+
+  server_events
+
+  service_logs
+
+  system_events
+
+  infrastructure_alerts
