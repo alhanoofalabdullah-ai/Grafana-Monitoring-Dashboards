@@ -1,0 +1,9 @@
+staging_metrics:
+
+  release_readiness
+
+  deployment_validation
+
+  staging_health
+
+  performance_score
