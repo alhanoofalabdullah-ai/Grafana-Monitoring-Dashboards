@@ -1,0 +1,50 @@
+groups:
+
+- name: EnterpriseObservabilityAlerts
+
+  rules:
+
+  - alert: ServiceDown
+
+    expr: up == 0
+
+    for: 2m
+
+    labels:
+      severity: critical
+
+  - alert: HighErrorRate
+
+    expr: error_rate > 5
+
+    for: 5m
+
+    labels:
+      severity: critical
+
+  - alert: TraceFailure
+
+    expr: failed_traces_total > 0
+
+    for: 2m
+
+    labels:
+      severity: critical
+
+  - alert: SLABreach
+
+    expr: sla_compliance < 99
+
+    for: 15m
+
+    labels:
+      severity: warning
+
+  - alert: ResourceExhaustion
+
+    expr: cpu_usage_percent > 90
+
+    for: 10m
+
+    labels:
+      severity: critical
