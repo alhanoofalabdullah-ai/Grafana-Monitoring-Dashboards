@@ -1,0 +1,11 @@
+azure_metrics:
+
+  vm_health
+
+  azure_sql_health
+
+  aks_status
+
+  storage_usage
+
+  app_service_status
