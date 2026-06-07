@@ -1,0 +1,9 @@
+storage_capacity:
+
+  total_storage
+
+  used_storage
+
+  growth_rate
+
+  forecasted_exhaustion_date
