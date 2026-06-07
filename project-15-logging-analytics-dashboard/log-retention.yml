@@ -1,0 +1,9 @@
+log_retention:
+
+  storage_usage
+
+  archive_status
+
+  retention_policy
+
+  log_lifecycle
