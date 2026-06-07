@@ -1,0 +1,16 @@
+global:
+
+  scrape_interval: 15s
+
+rule_files:
+
+  - "/etc/prometheus/security-alert-rules.yml"
+
+scrape_configs:
+
+  - job_name: "security-monitoring"
+
+    static_configs:
+
+      - targets:
+          - "localhost:9100"
