@@ -1,0 +1,13 @@
+azure_monitoring:
+
+  services:
+
+    - virtual_machines
+
+    - azure_sql
+
+    - aks
+
+    - storage_accounts
+
+    - app_services
