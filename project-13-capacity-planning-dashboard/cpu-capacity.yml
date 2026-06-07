@@ -1,0 +1,11 @@
+cpu_capacity:
+
+  current_utilization
+
+  peak_utilization
+
+  growth_rate
+
+  forecasted_demand
+
+  forecasted_capacity_limit
