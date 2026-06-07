@@ -1,0 +1,11 @@
+aws_metrics:
+
+  ec2_health
+
+  rds_health
+
+  eks_health
+
+  lambda_invocations
+
+  load_balancer_status
