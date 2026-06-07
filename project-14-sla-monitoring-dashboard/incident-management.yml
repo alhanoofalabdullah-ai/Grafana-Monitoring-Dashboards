@@ -1,0 +1,9 @@
+incident_metrics:
+
+  open_incidents
+
+  resolved_incidents
+
+  mttr
+
+  escalation_rate
