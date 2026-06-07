@@ -1,0 +1,9 @@
+production_metrics:
+
+  uptime_percent
+
+  incident_count
+
+  response_time
+
+  service_availability
