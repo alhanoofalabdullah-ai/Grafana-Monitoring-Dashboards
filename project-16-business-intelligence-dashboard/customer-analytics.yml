@@ -1,0 +1,9 @@
+customer_metrics:
+
+  active_customers
+
+  retention_rate
+
+  churn_rate
+
+  satisfaction_score
