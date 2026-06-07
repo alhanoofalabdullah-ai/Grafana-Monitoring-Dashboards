@@ -1,0 +1,50 @@
+groups:
+
+- name: CloudMonitoringAlerts
+
+  rules:
+
+  - alert: CloudServiceDown
+
+    expr: up == 0
+
+    for: 2m
+
+    labels:
+      severity: critical
+
+  - alert: HighCloudCPUUsage
+
+    expr: cloud_cpu_usage_percent > 80
+
+    for: 5m
+
+    labels:
+      severity: warning
+
+  - alert: HighCloudCost
+
+    expr: cloud_budget_usage_percent > 90
+
+    for: 10m
+
+    labels:
+      severity: warning
+
+  - alert: DatabaseUnavailable
+
+    expr: cloud_database_status == 0
+
+    for: 2m
+
+    labels:
+      severity: critical
+
+  - alert: StorageCapacityCritical
+
+    expr: cloud_storage_usage_percent > 95
+
+    for: 5m
+
+    labels:
+      severity: critical
