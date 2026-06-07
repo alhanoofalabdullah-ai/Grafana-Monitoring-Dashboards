@@ -1,0 +1,9 @@
+api_gateway_metrics:
+
+  request_count
+
+  request_rate
+
+  response_time
+
+  error_rate
