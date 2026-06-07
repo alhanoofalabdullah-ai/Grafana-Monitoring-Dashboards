@@ -1,0 +1,9 @@
+service_discovery:
+
+  registered_services
+
+  available_services
+
+  unavailable_services
+
+  registration_failures
