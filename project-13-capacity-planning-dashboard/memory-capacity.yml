@@ -1,0 +1,9 @@
+memory_capacity:
+
+  current_usage
+
+  growth_rate
+
+  forecasted_usage
+
+  saturation_risk
