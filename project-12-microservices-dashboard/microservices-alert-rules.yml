@@ -1,0 +1,52 @@
+groups:
+
+- name: MicroservicesAlerts
+
+  rules:
+
+  - alert: ServiceDown
+
+    expr: up == 0
+
+    for: 2m
+
+    labels:
+      severity: critical
+
+  - alert: HighAPILatency
+
+    expr: rate(http_request_duration_seconds_sum[5m])
+      /
+      rate(http_request_duration_seconds_count[5m]) > 2
+
+    for: 5m
+
+    labels:
+      severity: warning
+
+  - alert: HighErrorRate
+
+    expr: rate(http_requests_total{status=~"5.."}[5m]) > 0.05
+
+    for: 5m
+
+    labels:
+      severity: critical
+
+  - alert: DependencyFailure
+
+    expr: failed_dependencies_total > 0
+
+    for: 2m
+
+    labels:
+      severity: critical
+
+  - alert: TraceFailureDetected
+
+    expr: failed_traces_total > 0
+
+    for: 2m
+
+    labels:
+      severity: critical
