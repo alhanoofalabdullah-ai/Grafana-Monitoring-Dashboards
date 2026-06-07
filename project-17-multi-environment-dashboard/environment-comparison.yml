@@ -1,0 +1,9 @@
+environment_comparison:
+
+  version_alignment
+
+  configuration_drift
+
+  deployment_consistency
+
+  environment_health_score
