@@ -1,0 +1,9 @@
+dependency_metrics:
+
+  dependency_status
+
+  dependency_latency
+
+  failed_dependencies
+
+  dependency_health
