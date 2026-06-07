@@ -1,0 +1,17 @@
+router_monitoring:
+
+  routers:
+
+    - core_router_01
+
+    - branch_router_01
+
+  metrics:
+
+    - uptime
+
+    - interface_traffic
+
+    - latency
+
+    - routing_status
