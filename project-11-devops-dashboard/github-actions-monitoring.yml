@@ -1,0 +1,9 @@
+github_actions_metrics:
+
+  workflow_runs
+
+  workflow_failures
+
+  deployment_success
+
+  execution_duration
