@@ -1,0 +1,17 @@
+firewall_monitoring:
+
+  firewalls:
+
+    - firewall_01
+
+    - edge_firewall_01
+
+  metrics:
+
+    - firewall_status
+
+    - active_sessions
+
+    - blocked_connections
+
+    - security_events
