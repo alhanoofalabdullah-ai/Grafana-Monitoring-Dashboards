@@ -1,0 +1,9 @@
+deployment_metrics:
+
+  deployment_frequency
+
+  deployment_success_rate
+
+  rollback_rate
+
+  release_readiness
