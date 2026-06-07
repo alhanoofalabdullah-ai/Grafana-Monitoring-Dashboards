@@ -1,0 +1,13 @@
+node_exporter:
+
+  enabled: true
+
+  metrics:
+
+    - cpu
+
+    - memory
+
+    - disk
+
+    - network
