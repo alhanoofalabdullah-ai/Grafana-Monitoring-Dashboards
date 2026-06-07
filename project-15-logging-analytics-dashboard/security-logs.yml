@@ -1,0 +1,9 @@
+security_logs:
+
+  authentication_events
+
+  failed_logins
+
+  access_violations
+
+  threat_indicators
