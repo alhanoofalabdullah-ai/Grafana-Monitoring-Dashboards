@@ -1,0 +1,9 @@
+threat_detection:
+
+  brute_force_attempts
+
+  malware_events
+
+  suspicious_activities
+
+  threat_indicators
