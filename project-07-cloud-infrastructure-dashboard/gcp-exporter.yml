@@ -1,0 +1,13 @@
+gcp_monitoring:
+
+  services:
+
+    - compute_engine
+
+    - cloud_sql
+
+    - gke
+
+    - cloud_storage
+
+    - cloud_functions
