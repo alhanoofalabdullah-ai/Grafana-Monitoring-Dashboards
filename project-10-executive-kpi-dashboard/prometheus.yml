@@ -1,0 +1,16 @@
+global:
+
+  scrape_interval: 30s
+
+rule_files:
+
+  - "/etc/prometheus/executive-kpi-alert-rules.yml"
+
+scrape_configs:
+
+  - job_name: "business-kpis"
+
+    static_configs:
+
+      - targets:
+          - "business-exporter:9200"
