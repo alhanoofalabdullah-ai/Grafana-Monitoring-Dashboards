@@ -1,9 +1,0 @@
-application_logs:
-
-  user_activities
-
-  api_requests
-
-  transactions
-
-  application_errors
