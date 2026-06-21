@@ -1,9 +1,0 @@
-deployment_monitoring:
-
-  deployment_status
-
-  replicas_available
-
-  replicas_desired
-
-  deployment_failures

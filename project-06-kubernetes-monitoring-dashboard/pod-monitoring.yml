@@ -1,9 +1,0 @@
-pod_monitoring:
-
-  pod_status
-
-  pod_restarts
-
-  pod_availability
-
-  pod_resource_usage
