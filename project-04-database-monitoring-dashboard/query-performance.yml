@@ -1,9 +1,0 @@
-query_metrics:
-
-  query_duration
-
-  query_count
-
-  query_latency
-
-  transactions_per_second

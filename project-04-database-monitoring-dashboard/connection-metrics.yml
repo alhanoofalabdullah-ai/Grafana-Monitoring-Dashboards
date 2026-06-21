@@ -1,9 +1,0 @@
-connection_metrics:
-
-  active_connections
-
-  failed_connections
-
-  max_connections
-
-  connection_utilization

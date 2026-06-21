@@ -1,7 +1,0 @@
-slow_query_monitoring:
-
-  enabled: true
-
-  threshold_seconds: 5
-
-  alert_after: 10
