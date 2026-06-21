@@ -1,9 +1,0 @@
-response_metrics:
-
-  average_response_time
-
-  max_response_time
-
-  api_latency
-
-  sla_breaches
