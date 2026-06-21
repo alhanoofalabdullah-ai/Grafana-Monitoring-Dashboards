@@ -1,28 +1,63 @@
-# Project 01 – Infrastructure Monitoring Dashboard
+# Project 01 – Enterprise Infrastructure Monitoring Center
 
-Enterprise infrastructure monitoring dashboard using Grafana, Prometheus, Node Exporter, and Docker.
+Enterprise monitoring platform using:
 
-## Overview
-
-This project monitors server infrastructure metrics such as CPU, memory, disk, and system uptime.
-
-## Components
-
-- Grafana Dashboard
-- Prometheus Monitoring
+- Grafana
+- Prometheus
+- Spring Boot
+- Docker
 - Node Exporter
-- Alert Rules
-- Docker Compose
 
-## Metrics Covered
+The platform provides centralized monitoring and observability for enterprise infrastructure.
 
-- CPU Usage
-- Memory Usage
-- Disk Usage
-- System Uptime
-- Instance Health
+---
 
-## Run
+## Features
 
-```bash
-docker-compose up -d
+- CPU Monitoring
+- Memory Monitoring
+- Disk Monitoring
+- Server Health Monitoring
+- Prometheus Alerts
+- Grafana Dashboards
+- REST API Metrics
+- Docker Deployment
+
+---
+
+## Architecture
+
+Server
+
+↓
+
+Node Exporter
+
+↓
+
+Prometheus
+
+↓
+
+Spring Boot Monitoring API
+
+↓
+
+Grafana Dashboard
+
+---
+
+## Technologies
+
+- Java 21
+- Spring Boot
+- Docker
+- Grafana
+- Prometheus
+- Maven
+
+---
+
+## Author
+
+Alhanoof Alabdullah
