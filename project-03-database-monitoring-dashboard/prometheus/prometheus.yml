@@ -1,0 +1,15 @@
+global:
+  scrape_interval: 15s
+
+rule_files:
+  - "alert-rules.yml"
+
+scrape_configs:
+  - job_name: "database-monitor-api"
+    metrics_path: "/actuator/prometheus"
+    static_configs:
+      - targets: ["database-monitor-api:8080"]
+
+  - job_name: "mysql-exporter"
+    static_configs:
+      - targets: ["mysql-exporter:9104"]
