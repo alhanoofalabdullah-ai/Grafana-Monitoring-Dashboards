@@ -1,0 +1,41 @@
+{
+  "title": "Database Monitoring Dashboard",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "10s",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "MySQL Exporter Health",
+      "gridPos": { "x": 0, "y": 0, "w": 6, "h": 4 },
+      "targets": [
+        {
+          "expr": "up{job=\"mysql-exporter\"}",
+          "legendFormat": "MySQL Exporter"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Active MySQL Connections",
+      "gridPos": { "x": 6, "y": 0, "w": 9, "h": 8 },
+      "targets": [
+        {
+          "expr": "mysql_global_status_threads_connected",
+          "legendFormat": "Connections"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "MySQL Questions",
+      "gridPos": { "x": 0, "y": 8, "w": 9, "h": 8 },
+      "targets": [
+        {
+          "expr": "rate(mysql_global_status_questions[5m])",
+          "legendFormat": "Queries/sec"
+        }
+      ]
+    }
+  ]
+}
