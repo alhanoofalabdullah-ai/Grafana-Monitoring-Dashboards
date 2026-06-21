@@ -1,9 +1,0 @@
-firewall_metrics:
-
-  allowed_connections
-
-  blocked_connections
-
-  security_violations
-
-  firewall_events
