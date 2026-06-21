@@ -1,9 +1,0 @@
-testing_metrics:
-
-  test_success_rate
-
-  failed_tests
-
-  qa_readiness
-
-  environment_health
