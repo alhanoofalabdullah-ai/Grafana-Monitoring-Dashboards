@@ -1,0 +1,18 @@
+groups:
+  - name: database-alerts
+    rules:
+      - alert: DatabaseExporterDown
+        expr: up{job="mysql-exporter"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "MySQL exporter is down"
+
+      - alert: HighDatabaseConnections
+        expr: mysql_global_status_threads_connected > 80
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High number of MySQL connections"
