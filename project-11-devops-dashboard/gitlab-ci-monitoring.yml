@@ -1,9 +1,0 @@
-gitlab_ci_metrics:
-
-  pipelines
-
-  jobs
-
-  deployments
-
-  release_status
