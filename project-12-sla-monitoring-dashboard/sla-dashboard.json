@@ -1,0 +1,30 @@
+{
+  "title": "SLA Monitoring Dashboard",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "10s",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "SLA API Health",
+      "gridPos": { "x": 0, "y": 0, "w": 6, "h": 4 },
+      "targets": [
+        {
+          "expr": "up{job=\"sla-api\"}",
+          "legendFormat": "SLA API"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "SLA API Request Rate",
+      "gridPos": { "x": 6, "y": 0, "w": 9, "h": 8 },
+      "targets": [
+        {
+          "expr": "rate(http_server_requests_seconds_count[5m])",
+          "legendFormat": "Requests/sec"
+        }
+      ]
+    }
+  ]
+}
