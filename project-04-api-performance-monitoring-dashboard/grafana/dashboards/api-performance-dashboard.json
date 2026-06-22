@@ -1,0 +1,52 @@
+{
+  "title": "API Performance Monitoring Dashboard",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "10s",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "API Service Health",
+      "gridPos": { "x": 0, "y": 0, "w": 6, "h": 4 },
+      "targets": [
+        {
+          "expr": "up{job=\"api-monitor-service\"}",
+          "legendFormat": "API Health"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Request Rate",
+      "gridPos": { "x": 6, "y": 0, "w": 9, "h": 8 },
+      "targets": [
+        {
+          "expr": "rate(http_server_requests_seconds_count[5m])",
+          "legendFormat": "Requests/sec"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Average Response Time",
+      "gridPos": { "x": 0, "y": 8, "w": 9, "h": 8 },
+      "targets": [
+        {
+          "expr": "rate(http_server_requests_seconds_sum[5m]) / rate(http_server_requests_seconds_count[5m])",
+          "legendFormat": "Avg Response Time"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "5xx Error Rate",
+      "gridPos": { "x": 9, "y": 8, "w": 9, "h": 8 },
+      "targets": [
+        {
+          "expr": "rate(http_server_requests_seconds_count{status=~\"5..\"}[5m])",
+          "legendFormat": "5xx Errors"
+        }
+      ]
+    }
+  ]
+}
