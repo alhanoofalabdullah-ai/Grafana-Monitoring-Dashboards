@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+
+  api-monitor-service:
+    build: ./api-monitor-service
+    container_name: api-monitor-service
+    ports:
+      - "8080:8080"
+
+  prometheus:
+    image: prom/prometheus
+    container_name: api-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus:/etc/prometheus
+    depends_on:
+      - api-monitor-service
+
+  grafana:
+    image: grafana/grafana
+    container_name: api-grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+    depends_on:
+      - prometheus
