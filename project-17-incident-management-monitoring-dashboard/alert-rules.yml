@@ -1,0 +1,14 @@
+groups:
+  - name: incident-alerts
+    rules:
+      - alert: IncidentApiDown
+        expr: up{job="incident-api"} == 0
+        for: 1m
+        labels:
+          severity: critical
+
+      - alert: HighIncidentVolume
+        expr: http_server_requests_seconds_count > 1000
+        for: 5m
+        labels:
+          severity: warning
