@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: cluster-monitor
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: cluster-monitor
+
+  template:
+    metadata:
+      labels:
+        app: cluster-monitor
+
+    spec:
+      containers:
+
+      - name: cluster-monitor
+
+        image: cluster-monitor:latest
+
+        ports:
+        - containerPort: 8080
