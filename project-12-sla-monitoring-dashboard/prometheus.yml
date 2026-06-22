@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s
+
+rule_files:
+  - "alert-rules.yml"
+
+scrape_configs:
+  - job_name: "sla-api"
+    static_configs:
+      - targets:
+          - sla-monitor-api:8080
