@@ -1,0 +1,14 @@
+groups:
+  - name: noc-alerts
+    rules:
+      - alert: NocServiceDown
+        expr: up{job="noc-api"} == 0
+        for: 1m
+        labels:
+          severity: critical
+
+      - alert: HighCriticalAlerts
+        expr: critical_alerts > 5
+        for: 2m
+        labels:
+          severity: warning
