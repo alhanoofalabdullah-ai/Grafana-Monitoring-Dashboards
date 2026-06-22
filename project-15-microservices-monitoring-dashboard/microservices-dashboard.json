@@ -1,0 +1,6 @@
+{
+  "title": "Microservices Monitoring Dashboard",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "5s"
+}
