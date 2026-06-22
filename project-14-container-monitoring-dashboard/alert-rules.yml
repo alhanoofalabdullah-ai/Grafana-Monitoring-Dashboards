@@ -1,0 +1,23 @@
+groups:
+
+- name: container-alerts
+
+  rules:
+
+  - alert: HighContainerCPUUsage
+
+    expr: rate(container_cpu_usage_seconds_total[5m]) > 0.8
+
+    for: 2m
+
+    labels:
+      severity: critical
+
+  - alert: HighContainerMemoryUsage
+
+    expr: container_memory_usage_bytes > 1000000000
+
+    for: 2m
+
+    labels:
+      severity: warning
