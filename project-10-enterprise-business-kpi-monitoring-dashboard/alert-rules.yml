@@ -1,0 +1,23 @@
+groups:
+
+- name: business-alerts
+
+  rules:
+
+  - alert: LowCustomerSatisfaction
+
+    expr: customer_satisfaction_score < 85
+
+    for: 5m
+
+    labels:
+      severity: warning
+
+  - alert: LowProjectCompletionRate
+
+    expr: project_completion_rate < 75
+
+    for: 5m
+
+    labels:
+      severity: critical
