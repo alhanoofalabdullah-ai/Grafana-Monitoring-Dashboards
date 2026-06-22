@@ -1,0 +1,11 @@
+INFO Application Started
+
+INFO User Login Successful
+
+WARNING High Memory Usage
+
+ERROR Database Connection Timeout
+
+ERROR API Gateway Failure
+
+INFO Service Recovered
