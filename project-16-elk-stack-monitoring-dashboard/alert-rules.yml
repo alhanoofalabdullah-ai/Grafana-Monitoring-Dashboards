@@ -1,0 +1,23 @@
+groups:
+
+- name: elk-alerts
+
+  rules:
+
+  - alert: HighErrorLogs
+
+    expr: elk_error_logs > 300
+
+    for: 2m
+
+    labels:
+      severity: critical
+
+  - alert: ElasticsearchDown
+
+    expr: up == 0
+
+    for: 1m
+
+    labels:
+      severity: warning
