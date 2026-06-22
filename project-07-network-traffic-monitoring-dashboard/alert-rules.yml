@@ -1,0 +1,23 @@
+groups:
+
+- name: network-alerts
+
+  rules:
+
+  - alert: HighNetworkLatency
+
+    expr: network_latency_ms > 80
+
+    for: 2m
+
+    labels:
+      severity: critical
+
+  - alert: HighBandwidthUsage
+
+    expr: network_bandwidth_usage > 900
+
+    for: 2m
+
+    labels:
+      severity: warning
