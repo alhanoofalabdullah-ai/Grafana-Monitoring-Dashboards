@@ -1,0 +1,23 @@
+groups:
+
+- name: apm-alerts
+
+  rules:
+
+  - alert: HighResponseTime
+
+    expr: application_response_time > 800
+
+    for: 2m
+
+    labels:
+      severity: critical
+
+  - alert: HighErrorRate
+
+    expr: application_error_rate > 3
+
+    for: 2m
+
+    labels:
+      severity: warning
